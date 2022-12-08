@@ -39,9 +39,9 @@ def read(cursor):
         Result['Name'] = row[0].replace('\n', ' ')
         Result['Email'] = row[1]
         Result['ID'] = row[2]
-        html = html + (f"<tr style='border: 1px solid blue'><th  style='border: 1px solid blue'>{Result['Name']}</th> <th style='border: 2px #7E1498'>{Result['Email']}</th></tr> <br>")
+        html = html + (f"<tr style='border: 1px solid blue'><th  style='border: 1px solid blue'>{Result['Name']}</th> <th style='border: 2px #4D0C5D'>{Result['Email']}</th></tr> <br>")
 
-    html = f"<table style='border: 1px solid blue'><tr style='border: 1px solid blue'><th  style='border: 1px #7E1498'>Name</th><th style='border: 2px solid blue'>Email</th></tr>{html}</table>"
+    html = f"<table style='border: 1px solid blue'><tr style='border: 1px solid blue'><th  style='border: 1px #4D0C5D'>Name</th><th style='border: 2px solid blue'>Email</th></tr>{html}</table>"
     # response = {'Results': Results, 'count': len(Results)}
     # ret = app.response_class(
     #     response=json.dumps(response),
