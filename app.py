@@ -45,5 +45,5 @@ def read(): # Name of the method
   )
   return ret #Return the data in a string format
 if __name__ == "__main__":
-  app.run(host='0.0.0.0',port='8080') #Run the flask app at port 8080
+  app.run(host='0.0.0.0',port='3000') #Run the flask app at port 8080
 
