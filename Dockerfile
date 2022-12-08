@@ -1,8 +1,10 @@
-FROM python:3.7-stretch
-RUN apt-get update -y
-RUN apt-get install -y python-pip python-dev build-essential
-COPY . /app
+FROM ubuntu:latest
+COPY ./requirements.txt /app/requirements.txt
 WORKDIR /app
-RUN pip install -r requirements.txt
-ENTRYPOINT ["python"]
+RUN apt update && apt -y install libmysqlclient-dev
+RUN apt -y install python3-pip
+RUN pip3 install -r requirements.txt
+COPY . /app
+ENTRYPOINT [ "python3" ]
 CMD ["app.py"]
+EXPOSE 8080
