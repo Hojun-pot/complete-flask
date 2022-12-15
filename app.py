@@ -107,13 +107,9 @@ def update_users():  # Name of the method
     return update(cur, id, email)
 
 
-@app.route("/delete", methods=['GET', 'POST'])  # Default - Show Data
+@app.route("/delete")  # Default - Show Data
 def delete_users():
-    print(request.json)
-    cur = mysql.connection.cursor()  # create a connection to the SQL instance
-    name = request.json["name"]
-    print("Name is " + name)
-    return delete(cur, name)
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port='8080')  # Run the flask app at port 8080
+   name = request.args.get('name')
+   cur = mysql.connection.cursor()
+   return delete(cur,name)
 
