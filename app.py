@@ -20,10 +20,10 @@ def insert(cursor, name, email):
     try:
         cursor.execute(string)
         mysql.connection.commit()
-        print("YUPPPP")
+        print("SUCCESSED")
         return "<h1>Success adding user to database</h1>"
     except Exception as e:
-        print("NOOOOO")
+        print("FAILED")
         print(e)
         return "<h1>Failed to add user to database.</h1>"
 
@@ -66,13 +66,13 @@ def delete(cursor,name):
         print(str)
         cursor.execute(str)
         mysql.connection.commit()
-        print("YUPPPP")
+        print("SUCCESSED")
         return "<h1>Success deleted user in database</h1>"
 
 
     except Exception as e:
 
-        print("NOOOOO")
+        print("FAILED")
 
         print(e)
 
